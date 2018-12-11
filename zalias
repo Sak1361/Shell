@@ -1,0 +1,18 @@
+alias ll='ls -l'        # 多用します
+alias la='ls -A'        # 多用します
+alias l='ls -CF'
+alias du='du -sh *'     # ディレクトリごとにサブディレクトリ含む合計容量を出力します
+alias reload='source ~/.zshrc' # .zshrc編集中は多用してます
+
+# git
+alias gb='git branch'
+alias glog='git log --pretty=format:"%C(yellow)%h%Creset %C(magenta)%ci%Creset%n%C(cyan)%an <%ae>%Creset%n%B"'
+alias glp='git log -p'
+alias glg='git log --graph --pretty=format:"%C(yellow)%h%Creset %C(magenta)%ci%Creset%n%C(cyan)%an <%ae>%Creset%n%B"'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdh='git diff HEAD'
+alias gds='git diff --stat'
+alias gdt='git difftool'
+alias gst='git status'
+alias gp='git pull'
