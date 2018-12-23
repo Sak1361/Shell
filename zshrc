@@ -1,6 +1,6 @@
+#zmodload zsh/zprof && zprof
 source ~/.zplug/init.zsh
 source ~/.zprofile
-source ~/.zalias
 
 zplug "wbinglee/zsh-wakatime"
 # 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
@@ -12,7 +12,7 @@ export ZSH_HIGHLIGHT_STYLES[path]='fg=081'
 # zsh-completions
 fpath=(~/.zplug/repos/zsh-users/zsh-completions/src ~/.zsh/completion $fpath)
 autoload -Uz compinit
-compinit -i
+compinit -C
 
 # history関係
 zplug "zsh-users/zsh-history-substring-search"
@@ -30,7 +30,7 @@ zplug "oknowton/zsh-dwim"
 
 #補完機能を使用する
 autoload -U compinit
-compinit
+compinit -C
 zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*:default' menu select true
 zstyle ':completion:*:default' menu select=1
@@ -90,3 +90,11 @@ zstyle ':completion:*:default' menu select=2
 autoload colors
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
+   zcompile ~/.zshrc
+fi
+
+#if (which zprof > /dev/null 2>&1) ;then
+#  zprof | less
+#fi

@@ -1,8 +1,32 @@
+####alias####
+alias ll='ls -l'  
+alias la='ls -A'  
+alias l='ls -CF'
+alias du='du -sh *' 
+alias reload='source ~/.zshrc'
+alias pip update='pip install --upgrade pip'
+
+# git
+alias gb='git branch'
+alias glog='git log --pretty=format:"%C(yellow)%h%Creset %C(magenta)%ci%Creset%n%C(cyan)%an <%ae>%Creset%n%B"'
+alias glp='git log -p'
+alias glg='git log --graph --pretty=format:"%C(yellow)%h%Creset %C(magenta)%ci%Creset%n%C(cyan)%an <%ae>%Creset%n%B"'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdh='git diff HEAD'
+alias gds='git diff --stat'
+alias gdt='git difftool'
+alias gst='git status'
+alias gp='git pull'
+alias gcm='git commit -m'
+alias gl='git clone'
+
+
+
 #日本語及びutf-8に
 export LANG=ja_JP.UTF-8
-
 # 補完機能を有効にする
-autoload -Uz compinit && compinit -u
+#autoload -Uz compinit && compinit -u
 #ヒストリーサイズ設定
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000
@@ -153,9 +177,9 @@ setopt COMPLETE_IN_WORD
 setopt NO_TIFY
 
 #git補完
-fpath=(~/.zsh/completion/_git $fpath)
-autoload -U compinit
-compinit -u
+#fpath=(~/.zsh/completion/_git $fpath)
+#autoload -U compinit
+#compinit -u
 
 #anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
