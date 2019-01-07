@@ -97,4 +97,4 @@ fi
 
 #if (which zprof > /dev/null 2>&1) ;then
 #  zprof | less
-#fi
+#fiexport PATH="/usr/local/opt/ruby/bin:$PATH"
