@@ -157,6 +157,8 @@ unsetopt SINGLE_LINE_ZLE
 setopt COMPLETE_IN_WORD
 #バックグラウンドジョブが終了したらすぐに知らせる。
 setopt NO_TIFY
+#git^HEADとか使う
+setopt no_nomatch
 
 #anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
